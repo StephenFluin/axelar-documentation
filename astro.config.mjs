@@ -2,9 +2,9 @@ import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 
 import mdx from "@astrojs/mdx";
+import remarkToc from "remark-toc";
 
-
-const DEFAULT_LAYOUT = '/src/layouts/Section.astro';
+const DEFAULT_LAYOUT = "/src/layouts/Section.astro";
 
 function setDefaultLayout() {
   return function (_, file) {
@@ -13,10 +13,10 @@ function setDefaultLayout() {
   };
 }
 
-// https://astro.build/config
 export default defineConfig({
   integrations: [react(), mdx()],
   markdown: {
-    // remarkPlugins: [setDefaultLayout],
+    remarkPlugins: [setDefaultLayout, remarkToc],
+    syntaxHighlight: false,
   },
 });

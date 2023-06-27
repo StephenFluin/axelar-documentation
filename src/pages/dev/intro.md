@@ -1,5 +1,4 @@
 ---
-layout: /src/layouts/Section.astro
 title: Axelar for developers
 ---
 

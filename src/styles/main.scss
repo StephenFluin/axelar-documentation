@@ -84,16 +84,32 @@ main {
 }
 .sideNav {
   width: 300px;
+  line-height:32px;
+  color:rgb(107, 114, 128);
+  font-size:14px;
 }
-.sideNav a {
+.sideNav .nav-header {
+  font-size:1.2em;
+  margin-bottom:16px;
+  padding-left: 0;
+}
+.sideNav *   {
   display: block;
+  color:rgb(107, 114, 128);
+  padding-left:8px;
+
+
+}
+.sideNav a:hover {
+  background-color: rgb(243, 244, 246);
+  color: rgb(17, 24, 39);
 }
 .nav-header {
   display: block;
   font-weight: bold;
 }
 .sideNav div.group {
-  margin-left: 8px;
+  margin-left: 16px;
   border-left:1px solid #CCC;
   padding-left: 8px;
 }
@@ -109,4 +125,13 @@ main {
 }
 .feedback svg:hover {
   color: blue;
+}
+
+/* Component Styles */
+.tabs li {
+  display:inline;
+  border:1px solid grey;
+  padding:8px;
+  border-radius:8px 8px 0 0;
+  margin-right:-1px;
 }
