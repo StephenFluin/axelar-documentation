@@ -1,15 +1,9 @@
 ---
 import "../styles/main.scss";
 
-export interface Props {
-	title: string;
-    description?: string;
-    image?: string;
-    hidden?: boolean;
+const { title, description, image, hidden } = Astro.props.frontmatter || Astro.props;
 
-}
-
-const { title, description, image,hidden } = Astro.props;
+const shownTitle = title ? title + ` | Axelar Documentation` : 'Axelar Documentation';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -18,9 +12,9 @@ const { title, description, image,hidden } = Astro.props;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="img/png" href="/images/favicon.png"/>
-      <title>{title} | Axelar Documentation</title>
-    <meta content="{title} | Axelar Documentation" property="og:title">
-    <meta content="{title} | Axelar Documentation" property="twitter:title">
+    <title>{shownTitle}</title>
+    <meta content="shownTitle" property="og:title">
+    <meta content="shownTitle" property="twitter:title">
     {description && 
       <meta content="{{description}}" name="description">
       <meta content="{{description}}" property="og:description">

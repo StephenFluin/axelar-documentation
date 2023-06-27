@@ -1,0 +1,16 @@
+{
+  "overview": "Overview",
+  "arbitrum": "Arbitrum",
+  "avalanche": "Avalanche",
+  "base": "Base",
+  "binance": "Binance",
+  "celo": "Celo",
+  "ethereum": "Ethereum",
+  "fantom": "Fantom",
+  "filecoin": "Filecoin",
+  "kava": "Kava",
+  "linea": "Linea",
+  "moonbeam": "Moonbeam",
+  "optimism": "Optimism",
+  "polygon": "Polygon"
+}

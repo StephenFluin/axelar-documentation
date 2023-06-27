@@ -1,0 +1,264 @@
+{
+  "mainnet": [
+    {
+      "id": "acrechain",
+      "name": "Acrechain",
+      "network_id": "acre",
+      "image": "/images/chains/acrechain.svg"
+    },
+    {
+      "id": "agoric",
+      "name": "Agoric",
+      "network_id": "agoric",
+      "image": "/images/chains/agoric.svg"
+    },
+    {
+      "id": "assetmantle",
+      "name": "AssetMantle",
+      "network_id": "assetmantle",
+      "image": "/images/chains/assetmantle.svg"
+    },
+    {
+      "id": "aura",
+      "name": "Aura",
+      "network_id": "aura",
+      "image": "/images/chains/aura.svg"
+    },
+    {
+      "id": "axelarnet",
+      "name": "Axelar",
+      "network_id": "axelarnet",
+      "image": "/images/chains/axelar.svg"
+    },
+    {
+      "id": "carbon",
+      "name": "Carbon",
+      "network_id": "carbon",
+      "image": "/images/chains/carbon.svg"
+    },
+    {
+      "id": "comdex",
+      "name": "Comdex",
+      "network_id": "comdex",
+      "image": "/images/chains/comdex.svg"
+    },
+    {
+      "id": "cosmoshub",
+      "name": "Cosmoshub",
+      "network_id": "cosmoshub",
+      "image": "/images/chains/cosmoshub.svg"
+    },
+    {
+      "id": "crescent",
+      "name": "Crescent",
+      "network_id": "crescent",
+      "image": "/images/chains/crescent.svg"
+    },
+    {
+      "id": "evmos",
+      "name": "Evmos",
+      "network_id": "evmos",
+      "image": "/images/chains/evmos.svg"
+    },
+    {
+      "id": "fetch",
+      "name": "Fetch",
+      "network_id": "fetch",
+      "image": "/images/chains/fetch.svg"
+    },
+    {
+      "id": "injective",
+      "name": "Injective",
+      "network_id": "injective",
+      "image": "/images/chains/injective.svg"
+    },
+    {
+      "id": "juno",
+      "name": "Juno",
+      "network_id": "juno",
+      "image": "/images/chains/juno.svg"
+    },
+    {
+      "id": "ki",
+      "name": "Ki",
+      "network_id": "ki",
+      "image": "/images/chains/ki.svg"
+    },
+    {
+      "id": "kujira",
+      "name": "Kujira",
+      "network_id": "kujira",
+      "image": "/images/chains/kujira.svg"
+    },
+    {
+      "id": "neutron",
+      "name": "Neutron",
+      "network_id": "neutron",
+      "image": "/images/chains/neutron.svg"
+    },
+    {
+      "id": "osmosis",
+      "name": "Osmosis",
+      "network_id": "osmosis",
+      "image": "/images/chains/osmosis.svg"
+    },
+    {
+      "id": "persistence",
+      "name": "Persistence",
+      "network_id": "persistence",
+      "image": "/images/chains/persistence.svg"
+    },
+    {
+      "id": "rebus",
+      "name": "Rebus",
+      "network_id": "rebus",
+      "image": "/images/chains/rebus.svg"
+    },
+    {
+      "id": "regen",
+      "name": "Regen",
+      "network_id": "regen",
+      "image": "/images/chains/regen.svg"
+    },
+    {
+      "id": "secret-snip",
+      "name": "Secret-SNIP",
+      "network_id": "secret-snip",
+      "image": "/images/chains/secret-snip.svg"
+    },
+    {
+      "id": "sommelier",
+      "name": "Sommelier",
+      "network_id": "sommelier",
+      "image": "/images/chains/sommelier.svg"
+    },
+    {
+      "id": "stargaze",
+      "name": "Stargaze",
+      "network_id": "stargaze",
+      "image": "/images/chains/stargaze.svg"
+    },
+    {
+      "id": "stride",
+      "name": "Stride",
+      "network_id": "stride",
+      "image": "/images/chains/stride.svg"
+    },
+    {
+      "id": "terra",
+      "name": "Terra",
+      "network_id": "terra-2",
+      "image": "/images/chains/terra.svg"
+    },
+    {
+      "id": "terraclassic",
+      "name": "Terra Classic",
+      "network_id": "terra",
+      "image": "/images/chains/terraclassic.svg"
+    },
+    {
+      "id": "umee",
+      "name": "Umee",
+      "network_id": "umee",
+      "image": "/images/chains/umee.svg"
+    },
+    {
+      "id": "xpla",
+      "name": "XPLA",
+      "network_id": "xpla",
+      "image": "/images/chains/xpla.svg"
+    }
+  ],
+  "testnet": [
+    {
+      "id": "acrechain",
+      "name": "Acrechain",
+      "network_id": "acre",
+      "image": "/images/chains/acrechain.svg"
+    },
+    {
+      "id": "aura",
+      "name": "Aura",
+      "network_id": "aura",
+      "image": "/images/chains/aura.svg"
+    },
+    {
+      "id": "axelarnet",
+      "name": "Axelar",
+      "network_id": "axelarnet",
+      "image": "/images/chains/axelar.svg"
+    },
+    {
+      "id": "burnt",
+      "name": "Burnt",
+      "network_id": "burnt",
+      "image": "/images/chains/burnt.svg"
+    },
+    {
+      "id": "evmos",
+      "name": "Evmos",
+      "network_id": "evmos",
+      "image": "/images/chains/evmos.svg"
+    },
+    {
+      "id": "fetch",
+      "name": "Fetch",
+      "network_id": "fetch",
+      "image": "/images/chains/fetch.svg"
+    },
+    {
+      "id": "kujira",
+      "name": "Kujira",
+      "network_id": "kujira",
+      "image": "/images/chains/kujira.svg"
+    },
+    {
+      "id": "neutron",
+      "name": "Neutron",
+      "network_id": "neutron",
+      "image": "/images/chains/neutron.svg"
+    },
+    {
+      "id": "odin",
+      "name": "Odin",
+      "network_id": "odin",
+      "image": "/images/chains/odin.svg"
+    },
+    {
+      "id": "osmosis",
+      "name": "Osmosis",
+      "network_id": "osmosis-6",
+      "image": "/images/chains/osmosis.svg"
+    },
+    {
+      "id": "persistence",
+      "name": "Persistence",
+      "network_id": "persistence",
+      "image": "/images/chains/persistence.svg"
+    },
+    {
+      "id": "secret",
+      "name": "Secret",
+      "network_id": "secret-snip-2",
+      "image": "/images/chains/secret.svg"
+    },
+    {
+      "id": "sei",
+      "name": "Sei",
+      "network_id": "sei-2",
+      "image": "/images/chains/sei.svg"
+    },
+    {
+      "id": "terra",
+      "name": "Terra",
+      "network_id": "terra-3",
+      "image": "/images/chains/terra.svg"
+    },
+    {
+      "id": "xpla",
+      "name": "Xpla",
+      "network_id": "xpla",
+      "image": "/images/chains/xpla.svg"
+    }
+  ]
+}
