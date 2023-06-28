@@ -1,6 +1,6 @@
 # Testnet
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 import MarkdownPath from '../../components/markdown'
 import IBCChannels from '../../components/ibc/channels'
 import TransferFeeCalculator from '../../components/transfer-fee/calculator'

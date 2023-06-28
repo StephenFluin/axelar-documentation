@@ -1,7 +1,7 @@
 # Base
 
 import Markdown from 'markdown-to-jsx'
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 import CodeBlock from '../../../components/code-block'
 import { Tabs, Tab } from 'nextra-theme-docs'
 

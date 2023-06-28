@@ -1,6 +1,6 @@
 # Celo
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 import CodeBlock from '../../../components/code-block'
 import Tabs from '../../../components/tabs'
 

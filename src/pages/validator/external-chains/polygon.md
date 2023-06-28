@@ -1,6 +1,6 @@
 # Polygon
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 Set up your Polygon Mainnet or Testnet (Mumbai) node.
 

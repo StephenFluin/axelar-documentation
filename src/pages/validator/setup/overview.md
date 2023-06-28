@@ -1,6 +1,6 @@
 # Overview
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 An Axelar network validator participates in block creation, multi-party cryptography protocols, and voting.
 

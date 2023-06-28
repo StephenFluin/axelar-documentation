@@ -1,6 +1,6 @@
 # Redeem AXL from an EVM chain
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 Redeem AXL tokens from an EVM chain to Axelar using the terminal.
 

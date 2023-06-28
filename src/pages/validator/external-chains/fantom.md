@@ -1,6 +1,6 @@
 # Fantom
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 Set up your Fantom Mainnet or Testnet Opera node.
 

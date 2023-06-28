@@ -1,6 +1,6 @@
 # Health check
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 Check the status of your validator.
 

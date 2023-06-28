@@ -1,6 +1,6 @@
 # Deploy a new token
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 Learn how to deploy a new Cosmos or ERC-20 token to any EVM chain supported by Axelar.
 

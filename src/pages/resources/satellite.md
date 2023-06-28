@@ -3,7 +3,7 @@ eleventyExcludeFromCollections: true
 ---
 # Satellite
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 import { Bleed } from 'nextra-theme-docs'
 
 ## What is Satellite?

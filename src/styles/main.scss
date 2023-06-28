@@ -135,3 +135,18 @@ main {
   border-radius:8px 8px 0 0;
   margin-right:-1px;
 }
+
+.callout {
+  display:flex;
+  align-items:center;
+  border-radius:4px;
+  margin: 16px 0;
+}
+.callout.warning {
+  background-color: rgb(254, 243, 199);
+  color: rgb(156, 109, 0);
+}
+.callout.error {
+  background-color: rgb(254, 226, 226);
+  color: rgb(185, 28, 28);
+}

@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: md
 ---
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 
 # Cosmos General Message Passing

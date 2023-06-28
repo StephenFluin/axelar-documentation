@@ -1,6 +1,6 @@
 # "Missed too many blocks" status
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 If your validator misses 6 or more of the last 100 blocks then your Axelar status becomes `missed_too_many_blocks` and your [health check](../setup/health-check) prints something like:
 

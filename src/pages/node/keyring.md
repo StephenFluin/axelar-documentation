@@ -1,6 +1,6 @@
 # Keyring backend
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 Many Axeler CLI commands require an Axelar account controlled by a secret key. Your secret key must be stored securely so as to minimize the risk of exposure to an attacker.
 

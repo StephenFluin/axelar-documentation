@@ -3,7 +3,7 @@ eleventyExcludeFromCollections: true
 ---
 # Add a new EVM chain
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 import { Bleed } from 'nextra-theme-docs'
 import Tabs from '../../components/tabs'
 import CodeBlock from '../../components/code-block'

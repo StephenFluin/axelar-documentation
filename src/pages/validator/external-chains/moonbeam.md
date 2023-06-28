@@ -1,6 +1,6 @@
 # Moonbeam
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 Set up your Moonbeam Mainnet or Testnet (Moonbase-Alpha) node.
 

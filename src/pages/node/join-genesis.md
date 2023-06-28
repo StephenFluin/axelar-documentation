@@ -1,6 +1,6 @@
 # Genesis sync
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 import Markdown from 'markdown-to-jsx'
 import MarkdownPath from '../../components/markdown'
 import Tabs from '../../components/tabs'

@@ -1,6 +1,6 @@
 # Start-up issues
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 [TODO revise]
 

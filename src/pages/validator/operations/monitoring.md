@@ -1,4 +1,4 @@
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 # Monitoring a Validator or Node
 

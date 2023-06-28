@@ -1,6 +1,6 @@
 # Call a contract on chain B from chain A
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 To call a contract on chain B from chain A, the user needs to call `callContract` on the gateway of chain A, specifying:
 

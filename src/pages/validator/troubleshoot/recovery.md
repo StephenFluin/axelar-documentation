@@ -1,6 +1,6 @@
 # Recover from secret data
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 [TODO revise]
 

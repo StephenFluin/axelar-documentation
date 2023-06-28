@@ -1,6 +1,6 @@
 # Quick sync
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 Start your Axelar node using a snapshot.
 

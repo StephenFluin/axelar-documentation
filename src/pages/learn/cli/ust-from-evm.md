@@ -1,6 +1,6 @@
 # Redeem UST from an EVM chain
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 Redeem UST tokens from an EVM chain to Terra using the terminal.
 

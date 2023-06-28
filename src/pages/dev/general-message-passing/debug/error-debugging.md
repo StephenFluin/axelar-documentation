@@ -1,6 +1,6 @@
 # Execution error messages
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 There are two reasons that executions fail:
 

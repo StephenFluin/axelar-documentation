@@ -1,6 +1,6 @@
 # Old instructions: Quick sync (recommended)
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 import Markdown from 'markdown-to-jsx'
 import Tabs from '../../components/tabs'
 import CodeBlock from '../../components/code-block'

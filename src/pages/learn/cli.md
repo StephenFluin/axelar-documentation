@@ -1,6 +1,6 @@
 # Axelar command-line interface (CLI)
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 Some CLI commands require access to a fully synced Axelar node. Learn how to [start your own Axelar node](../node/join).
 

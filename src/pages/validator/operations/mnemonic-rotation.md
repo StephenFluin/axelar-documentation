@@ -1,4 +1,4 @@
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 # Rotation of mnemonics in tofnd
 

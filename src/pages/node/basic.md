@@ -1,6 +1,6 @@
 # Basic node management
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from '/src/components/callout'
 
 Start and stop your node, test whether your blockchain is downloaded. Backup your keys and chain data. Create an account, check your AXL balance, get AXL tokens from the faucet.
 
