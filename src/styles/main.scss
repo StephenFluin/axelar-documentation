@@ -24,7 +24,7 @@ a:hover {
 }
 article a,
 article a:hover {
-  color: blue;
+  color: rgb(59, 130, 246);
 }
 h1 {
   font-size: 2.25rem;
@@ -92,6 +92,9 @@ main {
   border: 0px solid #fff;
   background-color: #f2f2f2;
   padding: 8px;
+}
+ol li, ul li {
+  margin-bottom:4px;
 }
 .mainBody {
   flex: 1;
@@ -185,4 +188,11 @@ tab-item.active {
 .callout.error {
   background-color: rgb(254, 226, 226);
   color: rgb(185, 28, 28);
+}
+.copy-capable button {
+  width:16px;
+  height:16px;
+  border:0px;
+  background-color:transparent;
+  vertical-align:center;
 }

@@ -70,7 +70,6 @@ export default ({ environment = "mainnet" }) => {
                   <Copy
                     size={18}
                     value={network_id}
-                    title={network_id}
                   />
                 </div>
               </div>
