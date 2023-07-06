@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/markdown-remark": "^2.2.1",
     "@astrojs/mdx": "^0.19.7",
     "@astrojs/react": "^2.2.1",
     "@headlessui/react": "^1.7.2",
@@ -37,6 +38,8 @@
     "react-redux": "^8.1.1",
     "react-syntax-highlighter": "^15.5.0",
     "redux": "^4.2.1",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-slug": "^5.1.0",
     "remark-toc": "^8.0.1",
     "remove-markdown": "^0.5.0",
     "sass": "^1.63.6",
