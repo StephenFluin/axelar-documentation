@@ -23,16 +23,14 @@ Start your Axelar node and download the blockchain from scratch.
 
 Configure your system as per [Node configuration](config-node) except specify the correct version of `axelard` according to your network and position in the upgrade path:
 
-<Tabs tabs={[
-{
-title: "Mainnet",
-content: <MarkdownPath src="/md/mainnet/upgrade-path.md" />
-},
-{
-title: "Testnet",
-content: <MarkdownPath src="/md/testnet/upgrade-path.md" />
-}
-]} />
+<tabs>
+<tab-item title="Mainnet">
+ <MarkdownPath src="/md/mainnet/upgrade-path.md" />
+</tab-item>,
+<tab-item title="Testnet">
+ <MarkdownPath src="/md/testnet/upgrade-path.md" />
+</tab-item>
+</tabs>
 
 First, you have to change directory to "axelarate-community" repository.
 
@@ -49,20 +47,15 @@ setup-node.sh will download axelard binary version you specified in "$AXELARD_HO
 lrwxr-xr-x  1 kalid  staff        48 Jul  6 11:04 axelard -> /Users/kalid/.axelar_testnet/bin/axelard-v0.13.6
 ```
 
-<Tabs tabs={[
-{
-title: "Mainnet",
-content: <CodeBlock language="bash">
-{"./scripts/setup-node.sh -n mainnet -a v0.10.7"}
-</CodeBlock>
-},
-{
-title: "Testnet",
-content: <CodeBlock language="bash">
-{"./scripts/setup-node.sh -n testnet -a v0.13.6"}
-</CodeBlock>
-}
-]} />
+<tabs>
+<tab-item title="Mainnet">
+ <pre><code language="bash">./scripts/setup-node.sh -n mainnet -a v0.10.7</code></pre>
+</tab-item>
+<tab-item title="Testnet">
+ <pre><code language="bash">./scripts/setup-node.sh -n testnet -a v0.13.6</code></pre>
+</tab-item>
+
+</tabs>
 
 Start your node with the newly configured `axelard` version:
 

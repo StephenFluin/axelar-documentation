@@ -1,13 +1,18 @@
 import { ResourcesView } from '/src/components/resources-view';
 import { Callout } from '/src/components/callout';
+import Resources from "../components/resources";
 
 
 # Resources
 
-
-<ResourcesView client:visible></ResourcesView>
-
-
+<tabs>
+<tab-item title="Mainnet">
+    <Resources environment="mainnet" />
+</tab-item>
+<tab-item title="Testnet">
+    <Resources environment="testnet" />
+</tab-item>
+</tabs>
 
 
 ## Looking for help?
