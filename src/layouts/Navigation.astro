@@ -54,12 +54,12 @@ const section = Astro.url.pathname?.match(/\/([^\/]*)\//)?.[1];
                         Forking Mainnet
                     </a>
                 </div>
-                <a href="/dev/general-message-passing/">Recovery</a>
-                <a href="/dev/general-message-passing/">Monitoring</a>
-                <a href="/dev/general-message-passing/">Solidity Utilities</a>
-                <a href="/dev/general-message-passing/">Sandbox</a>
-                <a href="/dev/general-message-passing/">Cosmos GMP</a>
-                <a href="/dev/general-message-passing/">USDC CCTP</a>
+                <a href="/dev/general-message-passing/recovery">Recovery</a>
+                <a href="/dev/general-message-passing/monitoring">Monitoring</a>
+                <a href="/dev/general-message-passing/solidity-utilities">Solidity Utilities</a>
+                <a href="/dev/general-message-passing/axelar-sandbox/intro">Sandbox</a>
+                <a href="/dev/general-message-passing/cosmos-gmp">Cosmos GMP</a>
+                <a href="/dev/general-message-passing/example-usdc-cctp">USDC CCTP</a>
             </div>
             <span>AxelarJS SDK</span>
             <div class="group">
@@ -93,14 +93,36 @@ const section = Astro.url.pathname?.match(/\/([^\/]*)\//)?.[1];
     )
 }
 {
-    (!section || section == "learn") && (
+    section == "learn" && (
+        <div>
+            <div class="nav-header">Learn</div>
+        </div>
+    )
+}
+{
+    section == "validator" && (
+        <div>
+            <div class="nav-header">Validators</div>
+        </div>
+    )
+}
+{
+    section == "resources" && (
+        <div>
+            <div class="nav-header">Resources</div>
+        </div>
+    )
+}
+{
+    (!section) && (
         <div>
             <div class="nav-header">Other</div>
         </div>
     )
 }
 <div>
-    <span>Resources</span>
+    { section != "resources" && (<span>Resources</span>)
+    }
     <div class="group">
         <a href="/resources/">Resources</a>
         <a href="/resources/mainnet">Mainnet</a>
@@ -111,8 +133,24 @@ const section = Astro.url.pathname?.match(/\/([^\/]*)\//)?.[1];
         <a href="/resources/keplr">Add Network to Keplr Wallet</a>
         <a href="/resources/wrapped-tokens">Wrap/unwrap tokens</a>
         <a href="/bug-bounty">Bug Bounty</a>
-
-
     </div>
+
     <span>Learn more about Axelar</span>
+    <div class="group">
+        <a href="/learn/network/flow">Crosschain Message Flow</a>
+        <a href="/learn/axlusdc">axlUSDC</a>
+        <a href="/learn/validators">Registering external chains for validators</a>
+        <a href="/learn/security">Security Overview</a>
+
+        <span>CLI</span>
+        <div class="group">
+            <a href="/learn/cli/">Introduction</a>
+            <a href="/learn/cli/ust-to-evm">Send UST to an EVM chain</a>
+            <a href="/learn/cli/ust-from-evm">Redeem UST from an EVM chain</a>
+            <a href="/learn/cli/axl-to-evm">Send AXL to an EVM chain</a>
+            <a href="/learn/cli/axl-from-evm">Redeem AXL from an EVM chain</a>
+        </div>
+
+
+
 </div>
