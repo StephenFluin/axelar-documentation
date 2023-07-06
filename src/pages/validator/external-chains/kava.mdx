@@ -27,18 +27,14 @@ cd kava
 ```
 
 <Tabs tabs={[
-{
-title: "Mainnet",
-content: <CodeBlock language="bash">
-git checkout [release tag]
-</CodeBlock>
-},
-{
-title: "Testnet",
-content: <CodeBlock language="bash">
-git checkout [release tag]
-</CodeBlock>
-}
+<tab-item title="Mainnet">
+ <pre><code>git checkout [release tag]</code></pre>
+
+</tab-item>
+<tab-item title="Testnet">
+ <pre><code>git checkout [release tag]</code></pre>
+
+</tab-item>
 ]} />
 
 ```bash
@@ -52,18 +48,14 @@ kava version --long
 
 ### Initialize Kava config
 <Tabs tabs={[
-{
-title: "Mainnet",
-content: <CodeBlock language="bash">
-kava init [your_moniker_name] --chain-id kava_2222-10
-</CodeBlock>
-},
-{
-title: "Testnet",
-content: <CodeBlock language="bash">
-kava init [your_moniker_name] --chain-id kava_2221-16000
-</CodeBlock>
-}
+<tab-item title="Mainnet">
+ <pre><code>kava init [your_moniker_name] --chain-id kava_2222-10</code></pre>
+
+</tab-item>
+<tab-item title="Testnet">
+ <pre><code>kava init [your_moniker_name] --chain-id kava_2221-16000</code></pre>
+
+</tab-item>
 ]} />
 
 ```bash
@@ -74,18 +66,14 @@ rm genesis.json
 
 ### Set up the Genesis file
 <Tabs tabs={[
-{
-title: "Mainnet",
-content: <CodeBlock language="bash">
-wget https://kava-genesis-files.s3.us-east-1.amazonaws.com/kava_2222-10/genesis.json
-</CodeBlock>
-},
-{
-title: "Testnet",
-content: <CodeBlock language="bash">
-wget https://raw.githubusercontent.com/Kava-Labs/kava-testnets/master/16000/genesis.json
-</CodeBlock>
-}
+<tab-item title="Mainnet">
+ <pre><code>wget https://kava-genesis-files.s3.us-east-1.amazonaws.com/kava_2222-10/genesis.json</code></pre>
+
+</tab-item>
+<tab-item title="Testnet">
+ <pre><code>wget https://raw.githubusercontent.com/Kava-Labs/kava-testnets/master/16000/genesis.json</code></pre>
+
+</tab-item>
 ]} />
 
 Edit `$HOME/.kava/config/config.toml` to add the following persistent peers.
@@ -124,18 +112,14 @@ pruning="everything"
 Create a state sync script `statesync.sh` with the following code and replace the RPC var for the appropriate network.
 
 <Tabs tabs={[
-{
-title: "Mainnet RPC",
-content: <CodeBlock language="bash">
-https://kava-mainnet.chainode.tech:443
-</CodeBlock>
-},
-{
-title: "Testnet RPC",
-content: <CodeBlock language="bash">
-https://kava-testnet.chainode.tech:443
-</CodeBlock>
-}
+<tab-item title="Mainnet RPC">
+ <pre><code>https://kava-mainnet.chainode.tech:443</code></pre>
+
+</tab-item>
+<tab-item title="Testnet RPC">
+ <pre><code>https://kava-testnet.chainode.tech:443</code></pre>
+
+</tab-item>
 ]} />
 
 ```bash

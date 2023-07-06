@@ -27,21 +27,17 @@ sudo apt-get install wget jq -y
 Check the appropriate version for the network accordingly [in their docs](https://docs.avax.network/build/tutorials/nodes-and-staking/run-avalanche-node) or choose the [latest release](https://github.com/ava-labs/avalanchego/releases)
 
 <Tabs tabs={[
-{
-title: "Mainnet",
-content: <CodeBlock language="bash">
-{`# This is an example - check their docs and release page to opt for the right version
+<tab-item title="Mainnet">
+ <pre><code># This is an example - check their docs and release page to opt for the right version
 AVALANCHEGO=v1.9.3
-`}
-</CodeBlock>
-},
-{
-title: "Testnet",
-content: <CodeBlock language="bash">
-{`# This is an example - check their docs and release page to opt for the right version
-AVALANCHEGO=v1.9.3`}
-</CodeBlock>
-}
+</code></pre>
+
+</tab-item>
+<tab-item title="Testnet">
+ <pre><code># This is an example - check their docs and release page to opt for the right version
+AVALANCHEGO=v1.9.3</code></pre>
+
+</tab-item>
 ]} />
 
 
@@ -78,18 +74,14 @@ avalanchego --version
 Note: Update your shell profile in accordance with the shell you are using
 
 <Tabs tabs={[
-{
-title: "Mainnet",
-content: <CodeBlock language="bash">
-{"echo export NETWORK_ID=mainnet >> $HOME/.profile"}
-</CodeBlock>
-},
-{
-title: "Testnet",
-content: <CodeBlock language="bash">
-{"echo export NETWORK_ID=fuji >> $HOME/.profile"}
-</CodeBlock>
-}
+<tab-item title="Mainnet">
+ <pre><code>echo export NETWORK_ID=mainnet >> $HOME/.profile</code></pre>
+
+</tab-item>
+<tab-item title="Testnet">
+ <pre><code>echo export NETWORK_ID=fuji >> $HOME/.profile</code></pre>
+
+</tab-item>
 ]} />
 
 Apply your changes

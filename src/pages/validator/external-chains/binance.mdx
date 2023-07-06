@@ -50,26 +50,24 @@ cd $HOME
 
 
 <Tabs tabs={[
-{
-title: "Mainnet",
-content: <CodeBlock language="bash">
-{`mkdir -p $HOME/.bsc/config
+<tab-item title="Mainnet">
+ <pre><code>mkdir -p $HOME/.bsc/config
 cd $HOME/.bsc/config
 wget https://github.com/bnb-chain/bsc/releases/download/$BSC_GETH_RELEASE/mainnet.zip
 unzip mainnet.zip
 rm mainnet.zip
-`}
-</CodeBlock>
-},
-{ title: "Testnet", content: <CodeBlock language="bash">
-{`mkdir $HOME/.bsc/config
+</code></pre>
+
+</tab-item>
+<tab-item title="Testnet">
+ <pre><code>mkdir $HOME/.bsc/config
 cd $HOME/.bsc/config
 wget https://github.com/binance-chain/bsc/releases/download/$BSC_GETH_RELEASE/testnet.zip
 unzip testnet.zip
 rm testnet.zip
-`}
-</CodeBlock>
-}
+</code></pre>
+
+</tab-item>
 ]} />
 
 

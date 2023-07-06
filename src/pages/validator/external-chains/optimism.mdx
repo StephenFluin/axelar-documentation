@@ -37,31 +37,27 @@ cp .env.example .env
 
 Set the following config options in `simple-optimism-node/.env`:
 <Tabs tabs={[
-{
-title: "Mainnet",
-content: <CodeBlock language="bash">
-{`NETWORK_NAME=mainnet
+<tab-item title="Mainnet">
+ <pre><code>NETWORK_NAME=mainnet
 NODE_TYPE=full
 BEDROCK_SOURCE=download
 # Your Ethereum RPC node endpoint. As an L2, your Optimism node will verify tx finality by
 # querying your own Ethereum RPC node.
 OP_NODE__RPC_ENDPOINT=
-OP_NODE__RPC_TYPE=basic`}
-</CodeBlock>
-},
-{
-title: "Testnet",
-content: <CodeBlock language="bash">
-{`# only goerli is supported for now
+OP_NODE__RPC_TYPE=basic</code></pre>
+
+</tab-item>
+<tab-item title="Testnet">
+ <pre><code># only goerli is supported for now
 NETWORK_NAME=goerli
 NODE_TYPE=full
 BEDROCK_SOURCE=download
 # Your Ethereum RPC node endpoint. As an L2, your Optimism node will verify tx finality by
 # querying your own Ethereum RPC node.
 OP_NODE__RPC_ENDPOINT=
-OP_NODE__RPC_TYPE=basic`}
-</CodeBlock>
-}
+OP_NODE__RPC_TYPE=basic</code></pre>
+
+</tab-item>
 ]} />
 
 ## Start the node

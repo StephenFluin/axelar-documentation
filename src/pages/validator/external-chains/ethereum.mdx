@@ -114,20 +114,16 @@ Compare it with what you have in `sudo journalctl -u geth -f`
 Alternatively, you can now also use the Geth JavaScript console and check status of your node by attaching to your newly created `geth.ipc`. Don't forget to replace `$USER` and `path`, depending on your server configuration.
 
 <Tabs tabs={[
-{
-title: "Mainnet",
-content: <CodeBlock language="bash">
-{`geth attach ipc:/root/.ethereum/geth.ipc
-eth.syncing`}
-</CodeBlock>
-},
-{
-title: "Goerli Testnet",
-content: <CodeBlock language="bash">
-{`geth attach ipc:/root/.ethereum/goerli/geth.ipc
-eth.syncing`}
-</CodeBlock>
-}
+<tab-item title="Mainnet">
+ <pre><code>geth attach ipc:/root/.ethereum/geth.ipc
+eth.syncing</code></pre>
+
+</tab-item>
+<tab-item title="Goerli Testnet">
+ <pre><code>geth attach ipc:/root/.ethereum/goerli/geth.ipc
+eth.syncing</code></pre>
+
+</tab-item>
 ]} />
 
 Once your node is fully synced, the output from above will say `false`. To test your Ethereum RPC node, you can send an RPC request using `cURL`

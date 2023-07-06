@@ -63,22 +63,18 @@ export FFI_BUILD_FROM_SOURCE=1
 Checkout the correct release and build the daemon.
 
 <Tabs tabs={[
-{
-title: "Mainnet",
-content: <CodeBlock language="bash">
-git checkout releases;
+<tab-item title="Mainnet">
+ <pre><code>git checkout releases;
 make clean all;
-sudo make install
-</CodeBlock>
-},
-{
-title: "Testnet",
-content: <CodeBlock language="bash">
-git checkout v1.20.3-hyperspace-nv21-rpc-p01;
+sudo make install</code></pre>
+
+</tab-item>
+<tab-item title="Testnet">
+ <pre><code>git checkout v1.20.3-hyperspace-nv21-rpc-p01;
 make clean hyperspacenet;
-sudo make install
-</CodeBlock>
-}
+sudo make install</code></pre>
+
+</tab-item>
 ]} />
 
 ### 2. Starting the Daemon
@@ -88,18 +84,14 @@ For systemd service files, the makefile provides a template that can be installe
 Download the latest pruned snapshot.
 
 <Tabs tabs={[
-{
-title: "Mainnet",
-content: <CodeBlock language="bash">
-aria2c -x5 https://snapshots.mainnet.filops.net/minimal/latest.zst
-</CodeBlock>
-},
-{
-title: "Testnet",
-content: <CodeBlock language="bash">
-aria2c -x5 https://snapshots.hyperspace.yoga/hyperspace-latest-pruned.car
-</CodeBlock>
-}
+<tab-item title="Mainnet">
+ <pre><code>aria2c -x5 https://snapshots.mainnet.filops.net/minimal/latest.zst</code></pre>
+
+</tab-item>
+<tab-item title="Testnet">
+ <pre><code>aria2c -x5 https://snapshots.hyperspace.yoga/hyperspace-latest-pruned.car</code></pre>
+
+</tab-item>
 ]} />
 
 Import the snapshot
