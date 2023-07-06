@@ -3,3 +3,4 @@ import { addTabs } from "./tabs";
 import { addCopy } from "./copy";
 import "./search";
 import "./prism.js";
+import "./active";

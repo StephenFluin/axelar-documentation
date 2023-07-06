@@ -18,8 +18,7 @@ export default ({
     [];
 
   return (
-    <div className="mt-2">
-      <table className="max-w-fit block border border-slate-200 dark:border-slate-800 rounded-lg overflow-x-auto">
+      <table className="resources bleed">
         <tbody>
           {_resources
             .map((r, i) => {
@@ -38,7 +37,7 @@ export default ({
                       const data = r?.[id];
 
                       return (
-                        <th
+                        <td
                           key={j}
                           scope="col"
                           className={`${i % 2 === 0 ? "bg-transparent" : "bg-gray-50 dark:bg-black"} ${i === _resources.length - 1 ? j === 0 ? "rounded-bl-lg" : j === COLUMNS.length - 1 ? "rounded-br-lg" : "" : ""} border-none whitespace-nowrap py-3 px-4 ${className || ""}`}
@@ -81,6 +80,7 @@ export default ({
                                         (
                                           <Copy
                                             size={20}
+                                            hide={true}
                                             value={value}
                                           />
                                         )
@@ -92,7 +92,7 @@ export default ({
                             </div> :
                             data
                           }
-                        </th>
+                        </td>
                       );
                     })
                   }
@@ -102,6 +102,5 @@ export default ({
           }
         </tbody>
       </table>
-    </div>
   );
 };

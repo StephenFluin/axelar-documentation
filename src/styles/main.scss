@@ -35,6 +35,10 @@ h2 {
   font-size: 1.8rem;
   font-weight: 700;
   margin: 1rem 0;
+  margin-top:45px;  
+}
+h3 {
+  font-size:24px;
 }
 h1,
 h2,
@@ -177,6 +181,7 @@ tabs li.active {
 tabs tab-item {
   border: 1px solid grey;
   padding: 16px;
+  border-radius: 0 8px 8px 8px;
 }
 tabs button {
   border: 0px;
@@ -208,10 +213,34 @@ h1 .anchor-icon {
   background-color: rgb(254, 226, 226);
   color: rgb(185, 28, 28);
 }
+.copy-capable {
+  display:inline;
+  
+}
 .copy-capable button {
   width:16px;
   height:16px;
   border:0px;
   background-color:transparent;
   vertical-align:center;
+}
+
+tab-item.bleed {
+  padding:0px;
+}
+
+.resources {
+    width:100%;
+    border-collapse: collapse;
+}
+
+
+
+.resources tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+// remove table cell borders from td
+.resources td {
+  border: 0px;
+  padding: 16px;
 }

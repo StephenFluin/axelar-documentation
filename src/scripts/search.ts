@@ -9,14 +9,14 @@ const search = instantsearch({
   searchClient,
 });
 
-search.addWidgets([
-  searchBox({
-    container: "#search"
-  }),
+// search.addWidgets([
+//   searchBox({
+//     container: "#search"
+//   }),
 
-  hits({
-    container: "#hits"
-  })
-]);
+//   hits({
+//     container: "#hits"
+//   })
+// ]);
 
-search.start();
+// search.start();

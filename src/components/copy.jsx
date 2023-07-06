@@ -2,13 +2,13 @@
 export default ({
   size = 18,
   value,
-  onCopy,
+  hide,
   className = "",
 }) => {
 
 
   return (
-    <div class="copy-capable">
-      {value}</div>
+    <div class="copy-capable" value={hide ? value : null}>
+      {hide ? '' : value}</div>
   );
 };
