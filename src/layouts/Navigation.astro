@@ -1,78 +1,107 @@
 ---
-
 const section = Astro.url.pathname?.match(/\/([^\/]*)\//)?.[1];
-
 ---
 
-{(section == 'dev' || !section) && 
-<div>
-    <div class="nav-header">Developers</div>
-    <a href="/dev/intro">Introduction</a>
-    <span>Send Tokens</span>
-    <div class="group">
-        <a href="/dev/send-tokens/overview">Overview</a>
-        <a href="/dev/send-tokens/interchain-tokens">Interchain Tokens</a>
-    </div>
-    <span>General Message Passing</span>
-    <div class="group">
-    
-        <a href="/dev/general-message-passing/overview">Overview</a>
-        <a href="/dev/general-message-passing/local-dev">Local Development</a>
-        <a href="/dev/general-message-passing/examples">Examples</a>
-        <a href="/dev/general-message-passing/gmp-messages">Send Messages</a>
-        <a href="/dev/general-message-passing/gmp-tokens-with-messages">Send Messages with Tokens</a>
-        <span>Gas Services</span>
-        <div class="group">
-            <a href="/dev/general-message-passing/gas-services/intro">Introduction</a>
-            <a href="/dev/general-message-passing/gas-services/pay-gas">Pay Gas</a>
-            <a href="/dev/general-message-passing/gas-services/increase-gas">Increase Gas</a>
-            <a href="/dev/general-message-passing/gas-services/refund">Refund</a>
-
+{
+    (section == "dev" || !section) && (
+        <div>
+            <div class="nav-header">Developers</div>
+            <a href="/dev/intro">Introduction</a>
+            <span>Send Tokens</span>
+            <div class="group">
+                <a href="/dev/send-tokens/overview">Overview</a>
+                <a href="/dev/send-tokens/interchain-tokens">
+                    Interchain Tokens
+                </a>
+            </div>
+            <span>General Message Passing</span>
+            <div class="group">
+                <a href="/dev/general-message-passing/overview">Overview</a>
+                <a href="/dev/general-message-passing/local-dev">
+                    Local Development
+                </a>
+                <a href="/dev/general-message-passing/examples">Examples</a>
+                <a href="/dev/general-message-passing/gmp-messages">
+                    Send Messages
+                </a>
+                <a href="/dev/general-message-passing/gmp-tokens-with-messages">
+                    Send Messages with Tokens
+                </a>
+                <span>Gas Services</span>
+                <div class="group">
+                    <a href="/dev/general-message-passing/gas-services/intro">
+                        Introduction
+                    </a>
+                    <a href="/dev/general-message-passing/gas-services/pay-gas">
+                        Pay Gas
+                    </a>
+                    <a href="/dev/general-message-passing/gas-services/increase-gas">
+                        Increase Gas
+                    </a>
+                    <a href="/dev/general-message-passing/gas-services/refund">
+                        Refund
+                    </a>
+                </div>
+                <span>Debugging</span>
+                <div class="group">
+                    <a href="/dev/general-message-passing/debug/error-debugging">
+                        Error messages
+                    </a>
+                    <a href="/dev/general-message-passing/debug/debugging-your-smart-contract">
+                        Smart Contract
+                    </a>
+                    <a href="/dev/general-message-passing/debug/fork-mainnet">
+                        Forking Mainnet
+                    </a>
+                </div>
+                <a href="/dev/general-message-passing/">Recovery</a>
+                <a href="/dev/general-message-passing/">Monitoring</a>
+                <a href="/dev/general-message-passing/">Solidity Utilities</a>
+                <a href="/dev/general-message-passing/">Sandbox</a>
+                <a href="/dev/general-message-passing/">Cosmos GMP</a>
+                <a href="/dev/general-message-passing/">USDC CCTP</a>
+            </div>
+            <span>AxelarJS SDK</span>
+            <div class="group">
+                <a href="/dev/">Introduction</a>
+                <a href="/dev/">Token Transfer via Deposit Address</a>
+                <a href="/dev/">GMP transaction status and recovery</a>
+                <a href="/dev/">Axelar Query API</a>
+            </div>
+            <span>Reference</span>
+            <div class="group">
+                <a href="/dev/">Mainnet Chain Names</a>
+                <a href="/dev/">Mainnet Contract Addresses</a>
+                <a href="/dev/">Testnet Chain Names</a>
+                <a href="/dev/">Testnet Contract Addresses</a>
+                <a href="/dev/">Transaction Pricing</a>
+            </div>
         </div>
-        <span>Debugging</span>
-        <div class="group">
-            <a href="/dev/general-message-passing/debug/error-debugging">Error messages</a>
-            <a href="/dev/general-message-passing/debug/debugging-your-smart-contract">Smart Contract</a>
-            <a href="/dev/general-message-passing/debug/fork-mainnet">Forking Mainnet</a>
+    )
+}
+{
+    section == "node" && (
+        <div>
+            <div class="nav-header">Node Operators</div>
+            <a href="/node/config-node">Node configuration</a>
+            <a href="/node/join">Quick sync</a>
+            <a href="/node/join-genesis">Genesis sync</a>
+            <a href="/node/basic">Basic node management</a>
+            <a href="/node/config-cli">CLI configuration</a>
+            <a href="/node/keyring">Keyring backend</a>
         </div>
-        <a href="/dev/general-message-passing/">Recovery</a>
-        <a href="/dev/general-message-passing/">Monitoring</a>
-        <a href="/dev/general-message-passing/">Solidity Utilities</a>
-        <a href="/dev/general-message-passing/">Sandbox</a>
-        <a href="/dev/general-message-passing/">Cosmos GMP</a>
-        <a href="/dev/general-message-passing/">USDC CCTP</a>
-    </div>
-    <span>AxelarJS SDK</span>
-    <div class="group">
-        <a href="/dev/">Introduction</a>
-        <a href="/dev/">Token Transfer via Deposit Address</a>
-        <a href="/dev/">GMP transaction status and recovery</a>
-        <a href="/dev/">Axelar Query API</a>
-    </div>
-    <span>Reference</span>
-    <div class="group">
-
-        <a href="/dev/">Mainnet Chain Names</a>
-        <a href="/dev/">Mainnet Contract Addresses</a>
-        <a href="/dev/">Testnet Chain Names</a>
-        <a href="/dev/">Testnet Contract Addresses</a>
-        <a href="/dev/">Transaction Pricing</a>
-    </div>
-
-</div>
+    )
 }
-{section == 'node' &&
-<div>
-    <div class="nav-header">Node Operators</div>
-</div>
+{
+    (!section || section == "learn") && (
+        <div>
+            <div class="nav-header">Other</div>
+        </div>
+    )
 }
-{(!section || section == 'learn') &&
 <div>
-    <div class="nav-header">Other</div>
-</div>
-
-} 
-<span>Resources</span>
-<div class="group">
-    <a href="/resources/">Resources</a>
+    <span>Resources</span>
+    <div class="group">
+        <a href="/resources/">Resources</a>
+    </div>
 </div>
