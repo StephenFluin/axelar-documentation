@@ -70,9 +70,7 @@ export default ({ environment = "mainnet" }) => {
                   <Copy
                     size={18}
                     value={network_id}
-                    title={<span className="cursor-pointer font-medium">
-                      {network_id}
-                    </span>}
+                    title={network_id}
                   />
                 </div>
               </div>

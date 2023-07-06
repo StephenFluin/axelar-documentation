@@ -1,9 +1,6 @@
 # Old instructions: Quick sync (recommended)
 
 import { Callout } from '/src/components/callout'
-import Markdown from 'markdown-to-jsx'
-import Tabs from '../../components/tabs'
-import CodeBlock from '../../components/code-block'
 
 Start your Axelar node and download the blockchain.
 
@@ -36,25 +33,25 @@ git clone https://github.com/axelarnetwork/axelarate-community.git
 cd axelarate-community
 ```
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <div>
-Launch a new Axelar mainnet node with version <Markdown>`0.10.7`</Markdown> of axelar-core:
+Launch a new Axelar mainnet node with version `0.10.7` of axelar-core:
 <pre><code>./scripts/node.sh -a v0.10.7 -n mainnet</code></pre>
-Your Axelar node will initialize your data folder <Markdown>`~/.axelar`</Markdown>
+Your Axelar node will initialize your data folder `~/.axelar`
 
 </div>
 
 </tab-item>
 <tab-item title="Testnet">
  <div>
-Launch a new Axelar testnet node with version <Markdown>`0.13.6`</Markdown> of axelar-core:
+Launch a new Axelar testnet node with version `0.13.6` of axelar-core:
 <pre><code>./scripts/node.sh -a v0.13.6 -n testnet</code></pre>
-Your Axelar node will initialize your data folder <Markdown>`~/.axelar_testnet`</Markdown>
+Your Axelar node will initialize your data folder `~/.axelar_testnet`
 </div>
 
 </tab-item>
-]} />
+</tabs>
 
 To recover your secret keys from mnemonics, use `-t path_to_tendermint_key -m path_to_validator_mnemonic -r` (`-r` is to reset the chain). These flags work only on a completely fresh state.
 
@@ -64,7 +61,7 @@ Then your Axelar node will begin downloading blocks in the blockchain one-by-one
 
 BACKUP and DELETE the `validator` account secret mnemonic:
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <pre><code>~/.axelar/validator.txt</code></pre>
 
@@ -73,11 +70,11 @@ BACKUP and DELETE the `validator` account secret mnemonic:
  <pre><code>~/.axelar_testnet/validator.txt</code></pre>
 
 </tab-item>
-]} />
+</tabs>
 
 BACKUP but do NOT DELETE the Tendermint consensus secret key (this is needed on node restarts):
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <pre><code>~/.axelar/.core/config/priv_validator_key.json</code></pre>
 
@@ -86,7 +83,7 @@ BACKUP but do NOT DELETE the Tendermint consensus secret key (this is needed on 
  <pre><code>~/.axelar_testnet/.core/config/priv_validator_key.json</code></pre>
 
 </tab-item>
-]} />
+</tabs>
 
 ## View logs
 
@@ -94,7 +91,7 @@ View the streaming logs for your Axelar node:
 
 In a new terminal window:
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <pre><code>tail -f ~/.axelar/logs/axelard.log</code></pre>
 
@@ -103,7 +100,7 @@ In a new terminal window:
  <pre><code>tail -f ~/.axelar_testnet/logs/axelard.log</code></pre>
 
 </tab-item>
-]} />
+</tabs>
 
 You should see log messages for each block in the blockchain that your node downloads.
 
@@ -119,7 +116,7 @@ kill -9 $(pgrep -f "axelard start")
 
 Delete your `data` directory:
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <pre><code>rm -r ~/.axelar/.core/data</code></pre>
 
@@ -128,7 +125,7 @@ Delete your `data` directory:
  <pre><code>rm -r ~/.axelar_testnet/.core/data</code></pre>
 
 </tab-item>
-]} />
+</tabs>
 
 # Download the latest Axelar blockchain snapshot
 
@@ -146,22 +143,22 @@ Let `{SNAPSHOT_FILE}` denote the file name of the snapshot you downloaded. Examp
 
 Decompress the downloaded snapshot into your `data` directory:
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
- <pre><code>lz4 -dc --no-sparse {SNAPSHOT_FILE
-</tab-item> | tar xfC - ~/.axelar/.core</code></pre>
-},
+ <pre><code>lz4 -dc --no-sparse \{SNAPSHOT_FILE
+ | tar xfC - ~/.axelar/.core</code></pre>
+</tab-item>
 <tab-item title="Testnet">
- <pre><code>lz4 -dc --no-sparse {SNAPSHOT_FILE
-</tab-item> | tar xfC - ~/.axelar_testnet/.core</code></pre>
-}
-]} />
+ <pre><code>lz4 -dc --no-sparse \{SNAPSHOT_FILE
+ | tar xfC - ~/.axelar_testnet/.core</code></pre>
+</tab-item>
+</tabs>
 
 ## Resume your node
 
 Resume your Axelar node with the latest version of axelar-core:
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <pre><code>./scripts/node.sh -n mainnet</code></pre>
 
@@ -170,7 +167,7 @@ Resume your Axelar node with the latest version of axelar-core:
  <pre><code>./scripts/node.sh -n testnet</code></pre>
 
 </tab-item>
-]} />
+</tabs>
 
 Your Axelar node will launch and resume downloading the blockchain. You should see log messages for new blocks.
 

@@ -2,7 +2,9 @@
 
 import { Callout } from '/src/components/callout'
 import Tabs from '../../components/tabs'
-import CodeBlock from '../../components/code-block'
+
+import UpgradePath from '/src/upgrade-path.md';
+import UpgradePathTestnet from '/src/upgrade-path-testnet.md';
 
 Start your Axelar node and download the blockchain from scratch.
 
@@ -25,10 +27,11 @@ Configure your system as per [Node configuration](config-node) except specify th
 
 <tabs>
 <tab-item title="Mainnet">
- <MarkdownPath src="/md/mainnet/upgrade-path.md" />
-</tab-item>,
+ <UpgradePath />
+</tab-item>
 <tab-item title="Testnet">
- <MarkdownPath src="/md/testnet/upgrade-path.md" />
+ <UpgradePathTestnet />
+
 </tab-item>
 </tabs>
 

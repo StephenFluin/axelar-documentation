@@ -1,11 +1,11 @@
 # Mainnet
 
-import { Callout } from '/src/components/callout'
-import MarkdownPath from '../../components/markdown'
-import IBCChannels from '../../components/ibc/channels'
-import TransferFeeCalculator from '../../components/transfer-fee/calculator'
-import EVMChains from '../../components/evm/chains'
-import EVMAssets from '../../components/evm/assets'
+import { Callout } from "/src/components/callout";
+import IBCChannels from "../../components/ibc/channels";
+import TransferFeeCalculator from "../../components/transfer-fee/calculator";
+import EVMChains from "../../components/evm/chains";
+import EVMAssets from "../../components/evm/assets";
+import UpgradePath from "/src/upgrade-path.md";
 
 | Variable              | Value     |
 | --------------------- | --------- |
@@ -13,21 +13,20 @@ import EVMAssets from '../../components/evm/assets'
 | `vald` version        | `v0.33.1` |
 | `tofnd` version       | `v0.10.1` |
 
-
 ## EVM contract addresses
 
 <div className="space-y-1 mt-4">
-  {% island 'components/evm/chains.jsx', 'client:load' %}{% endisland %}
+  
+<EVMChains/>
+ 
+`Constant Address Deployer`: `0x98b2920d53612483f91f12ed7754e51b4a77919e`
 
-  `Constant Address Deployer`:  `0x98b2920d53612483f91f12ed7754e51b4a77919e`
 </div>
 
 <div className="space-y-1 mt-4">
-  ### Assets
-  Learn more about [wrapped assets like axlUSDC](/learn/axlusdc).
+  ### Assets Learn more about [wrapped assets like axlUSDC](/learn/axlusdc).
   <EVMAssets environment="mainnet" />
 </div>
-
 
 <div className="space-y-1 mt-4">
   ## IBC Channels
@@ -79,5 +78,4 @@ The gas relayer fee does not include any transaction fee assessed by the source 
 
 ## Upgrade Path
 
-<MarkdownPath src="/md/mainnet/upgrade-path.md" />
-
+<UpgradePath  />

@@ -45,7 +45,7 @@ sudo apt-get install docker.io
 
 ### Celo Networks
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <pre><code>export CELO_IMAGE=us.gcr.io/celo-org/geth:mainnet</code></pre>
 
@@ -54,7 +54,7 @@ sudo apt-get install docker.io
  <pre><code>export CELO_IMAGE=us.gcr.io/celo-org/geth:alfajores</code></pre>
 
 </tab-item>
-]} />
+</tabs>
 
 ### Pull the Celo Docker image
 
@@ -124,7 +124,7 @@ echo "export CELO_DIR=$CELO_DIR" >> ~/.bash_profile
 
 This command specifies the settings needed to run the node, and gets it started.
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <pre><code>docker run --name celo-fullnode -d --restart unless-stopped --stop-timeout 300 -p 8545:8545 -p 8546:8546 -p 30303:30303 -p 30303:30303/udp -v $CELO_DIR:/root/.celo $CELO_IMAGE --verbosity 3 --syncmode full --http --http.addr 0.0.0.0 --http.api eth,net,web3,debug,admin,personal --light.serve 90 --light.maxpeers 1000 --maxpeers 1100 --etherbase $CELO_ACCOUNT_ADDRESS --datadir /root/.celo</code></pre>
 
@@ -133,7 +133,7 @@ This command specifies the settings needed to run the node, and gets it started.
  <pre><code>docker run --name celo-fullnode -d --restart unless-stopped --stop-timeout 300 -p 8545:8545 -p 8546:8546 -p 30303:30303 -p 30303:30303/udp -v $CELO_DIR:/root/.celo $CELO_IMAGE --verbosity 3 --syncmode full --http --http.addr 0.0.0.0 --http.api eth,net,web3,debug,admin,personal --light.serve 90 --light.maxpeers 1000 --maxpeers 1100 --etherbase $CELO_ACCOUNT_ADDRESS --alfajores --datadir /root/.celo</code></pre>
 
 </tab-item>
-]} />
+</tabs>
 
 
 To see logs after starting the container, do the following.
@@ -203,7 +203,7 @@ docker rm celo-fullnode
 
 #### Start the new node
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <pre><code>docker run --name celo-fullnode -d --restart unless-stopped --stop-timeout 300 -p 8545:8545 -p 8546:8546 -p 30303:30303 -p 30303:30303/udp -v $CELO_DIR:/root/.celo $CELO_IMAGE --verbosity 3 --syncmode full --http --http.addr 0.0.0.0 --http.api eth,net,web3,debug,admin,personal --light.serve 90 --light.maxpeers 1000 --maxpeers 1100 --etherbase $CELO_ACCOUNT_ADDRESS --datadir /root/.celo</code></pre>
 
@@ -212,4 +212,4 @@ docker rm celo-fullnode
  <pre><code>docker run --name celo-fullnode -d --restart unless-stopped --stop-timeout 300 -p 8545:8545 -p 8546:8546 -p 30303:30303 -p 30303:30303/udp -v $CELO_DIR:/root/.celo $CELO_IMAGE --verbosity 3 --syncmode full --http --http.addr 0.0.0.0 --http.api eth,net,web3,debug,admin,personal --light.serve 90 --light.maxpeers 1000 --maxpeers 1100 --etherbase $CELO_ACCOUNT_ADDRESS --alfajores --datadir /root/.celo</code></pre>
 
 </tab-item>
-]} />
+</tabs>

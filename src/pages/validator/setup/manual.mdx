@@ -17,7 +17,7 @@ Check the appropriate version for the network accordingly:
 - [Mainnet](/resources/mainnet)
 - [Testnet](/resources/testnet)
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <pre><code>AXELARD_RELEASE=v0.33.1
 TOFND_RELEASE=v0.10.1</code></pre>
@@ -28,7 +28,7 @@ TOFND_RELEASE=v0.10.1</code></pre>
 TOFND_RELEASE=v0.10.1</code></pre>
 
 </tab-item>
-]} />
+</tabs>
 
 ```bash
 # verify correct versions
@@ -83,7 +83,7 @@ Save this mnemonic somewhere safe and delete the file by ` rm $HOME/.tofnd/expor
 
 ## Set environment variables
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <pre><code>echo export CHAIN_ID=axelar-dojo-1 >> $HOME/.profile</code></pre>
 
@@ -92,7 +92,7 @@ Save this mnemonic somewhere safe and delete the file by ` rm $HOME/.tofnd/expor
  <pre><code>echo export CHAIN_ID=axelar-testnet-lisbon-3 >> $HOME/.profile</code></pre>
 
 </tab-item>
-]} />
+</tabs>
 
 ```bash
 echo export MONIKER=PUT_YOUR_MONIKER_HERE >> $HOME/.profile
@@ -123,7 +123,7 @@ source $HOME/.profile
 
 Initialize your Axelar node, fetch configuration, genesis, seeds.
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <pre><code>axelard init $MONIKER --chain-id $CHAIN_ID
 wget https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/config.toml -O $HOME/.axelar/config/config.toml
@@ -146,11 +146,11 @@ wget https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/re
 sed -i.bak 's/external_address = \"\"/external_address = \"'"$(curl -4 ifconfig.co)"':26656\"/g' $HOME/.axelar/config/config.toml</code></pre>
 
 </tab-item>
-]} />
+</tabs>
 
 ## Sync From Snapshot
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <pre><code>axelard tendermint unsafe-reset-all
 URL=\`curl -L https://quicksync.io/axelar.json | jq -r '.[] |select(.file=="axelar-dojo-1-pruned")|.url'\`
@@ -169,7 +169,7 @@ wget -O - $URL | lz4 -d | tar -xvf -
 cd $HOME</code></pre>
 
 </tab-item>
-]} />
+</tabs>
 
 ## Create services
 

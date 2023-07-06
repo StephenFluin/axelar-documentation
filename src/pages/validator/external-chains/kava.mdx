@@ -26,7 +26,7 @@ git clone https://github.com/Kava-Labs/kava
 cd kava
 ```
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <pre><code>git checkout [release tag]</code></pre>
 
@@ -35,7 +35,7 @@ cd kava
  <pre><code>git checkout [release tag]</code></pre>
 
 </tab-item>
-]} />
+</tabs>
 
 ```bash
 make install
@@ -47,7 +47,7 @@ kava version --long
 ## Setup Kava Node
 
 ### Initialize Kava config
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <pre><code>kava init [your_moniker_name] --chain-id kava_2222-10</code></pre>
 
@@ -56,7 +56,7 @@ kava version --long
  <pre><code>kava init [your_moniker_name] --chain-id kava_2221-16000</code></pre>
 
 </tab-item>
-]} />
+</tabs>
 
 ```bash
 kava tendermint unsafe-reset-all --home $HOME/.kava
@@ -65,7 +65,7 @@ rm genesis.json
 ```
 
 ### Set up the Genesis file
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet">
  <pre><code>wget https://kava-genesis-files.s3.us-east-1.amazonaws.com/kava_2222-10/genesis.json</code></pre>
 
@@ -74,7 +74,7 @@ rm genesis.json
  <pre><code>wget https://raw.githubusercontent.com/Kava-Labs/kava-testnets/master/16000/genesis.json</code></pre>
 
 </tab-item>
-]} />
+</tabs>
 
 Edit `$HOME/.kava/config/config.toml` to add the following persistent peers.
 
@@ -111,7 +111,7 @@ pruning="everything"
 
 Create a state sync script `statesync.sh` with the following code and replace the RPC var for the appropriate network.
 
-<Tabs tabs={[
+<tabs>
 <tab-item title="Mainnet RPC">
  <pre><code>https://kava-mainnet.chainode.tech:443</code></pre>
 
@@ -120,7 +120,7 @@ Create a state sync script `statesync.sh` with the following code and replace th
  <pre><code>https://kava-testnet.chainode.tech:443</code></pre>
 
 </tab-item>
-]} />
+</tabs>
 
 ```bash
 #!/bin/bash
