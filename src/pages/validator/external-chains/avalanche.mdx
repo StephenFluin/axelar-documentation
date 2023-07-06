@@ -1,9 +1,5 @@
 # Avalanche
 
-
-import Tabs from '../../../components/tabs'
-import { Tabs as NextraTabs, Tab as NextraTab } from 'nextra-theme-docs'
-
 Instructions to set up your Avalanche node.
 
 ## Requirements
@@ -26,15 +22,17 @@ sudo apt-get install wget jq -y
 Check the appropriate version for the network accordingly [in their docs](https://docs.avax.network/build/tutorials/nodes-and-staking/run-avalanche-node) or choose the [latest release](https://github.com/ava-labs/avalanchego/releases)
 
 <tabs>
-<tab-item title="Mainnet">
- <pre><code># This is an example - check their docs and release page to opt for the right version
+<tab-item title="Mainnet" class="bleed">
+```bash
+ # This is an example - check their docs and release page to opt for the right version
 AVALANCHEGO=v1.9.3
-</code></pre>
-
+```
 </tab-item>
-<tab-item title="Testnet">
- <pre><code># This is an example - check their docs and release page to opt for the right version
-AVALANCHEGO=v1.9.3</code></pre>
+<tab-item title="Testnet" class="bleed">
+```bash
+ # This is an example - check their docs and release page to opt for the right version
+AVALANCHEGO=v1.9.3
+```
 
 </tab-item>
 </tabs>
@@ -74,11 +72,15 @@ Note: Update your shell profile in accordance with the shell you are using
 
 <tabs>
 <tab-item title="Mainnet">
- <pre><code>echo export NETWORK_ID=mainnet >> $HOME/.profile</code></pre>
+ ```bash
+ echo export NETWORK_ID=mainnet >> $HOME/.profile
+ ```
 
 </tab-item>
 <tab-item title="Testnet">
- <pre><code>echo export NETWORK_ID=fuji >> $HOME/.profile</code></pre>
+```bash
+echo export NETWORK_ID=fuji >> $HOME/.profile
+```
 
 </tab-item>
 </tabs>
@@ -188,21 +190,21 @@ In order for `vald` to connect to your Avalanche node, your `rpc_addr` should be
 vald's `config.toml`
 
 
-<NextraTabs items={['Mainnet', 'Testnet']}>
-  <NextraTab>
+<tabs>
+<tab-item title="Mainnet">
   ```bash
   [[axelar_bridge_evm]]
   name = "Avalanche"
   rpc_addr = "http://IP:PORT"
   start-with-bridge = true
   ```
-  </NextraTab>
-  <NextraTab>
+</tab-item>
+<tab-item title="Testnet">
   ```bash
   [[axelar_bridge_evm]]
   name = "Avalanche"
   rpc_addr = "http://IP:PORT"
   start-with-bridge = true
   ```
-  </NextraTab>
-</NextraTabs>
+</tab-item>
+</tabs>

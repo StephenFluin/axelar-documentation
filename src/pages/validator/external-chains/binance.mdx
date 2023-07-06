@@ -1,9 +1,6 @@
 # Binance
 
-import { Callout } from '/src/components/callout'
-
-import Tabs from '../../../components/tabs'
-import { Tabs as NextraTabs, Tab as NextraTab } from 'nextra-theme-docs'
+import { Callout } from "/src/components/callout"
 
 Instructions to set up your Binance node.
 
@@ -50,21 +47,24 @@ cd $HOME
 
 <tabs>
 <tab-item title="Mainnet">
- <pre><code>mkdir -p $HOME/.bsc/config
+ ```bash
+ mkdir -p $HOME/.bsc/config
 cd $HOME/.bsc/config
 wget https://github.com/bnb-chain/bsc/releases/download/$BSC_GETH_RELEASE/mainnet.zip
 unzip mainnet.zip
 rm mainnet.zip
-</code></pre>
+```
 
 </tab-item>
 <tab-item title="Testnet">
- <pre><code>mkdir $HOME/.bsc/config
+ ```bash
+mkdir $HOME/.bsc/config
 cd $HOME/.bsc/config
 wget https://github.com/binance-chain/bsc/releases/download/$BSC_GETH_RELEASE/testnet.zip
 unzip testnet.zip
 rm testnet.zip
-</code></pre>
+```
+
 
 </tab-item>
 </tabs>
@@ -252,8 +252,8 @@ vald's `config.toml`
 </Callout>
 
 
-<NextraTabs items={['Mainnet', 'Testnet']}>
-  <NextraTab>
+<tabs>
+  <tab-item title="">
   ```bash
   [[axelar_bridge_evm]]
   name = "binance"
@@ -261,13 +261,13 @@ vald's `config.toml`
   start-with-bridge = true
   finality_override = "confirmation"
   ```
-  </NextraTab>
-  <NextraTab>
+  </tab-item>
+  <tab-item title="">
   ```bash
   [[axelar_bridge_evm]]
   name = "binance"
   rpc_addr = "http://IP:PORT"
   start-with-bridge = true
   ```
-  </NextraTab>
-</NextraTabs>
+  </tab-item>
+</tabs>

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Web3 from "web3";
-import { Tooltip } from "@material-tailwind/react";
 
 import { equals_ignore_case } from "../../utils";
 import evm_chains from "../../data/evm_chains.json";
@@ -28,10 +27,9 @@ export default ({
   useEffect(() => {
     if (!web3) {
       setWeb3(new Web3(Web3.givenProvider));
-    }
-    else {
+    } else {
       try {
-        web3.currentProvider._handleChainChanged = e => {
+        web3.currentProvider._handleChainChanged = (e) => {
           try {
             const chainId = Web3.utils.hexToNumber(e?.chainId);
             setChainId(chainId);
@@ -65,14 +63,15 @@ export default ({
                 address: contract.address,
                 symbol: contract.symbol,
                 decimals: contract.decimals,
-                image: contract.image ? `${window.location.origin}${contract.image}` : undefined,
+                image: contract.image
+                  ? `${window.location.origin}${contract.image}`
+                  : undefined,
               },
             },
           });
         } catch (error) {}
         setData(null);
-      }
-      else {
+      } else {
         switchChain(chain_id, contract);
       }
     }
@@ -89,7 +88,8 @@ export default ({
         try {
           await web3.currentProvider.request({
             method: "wallet_addEthereumChain",
-            params: _evm_chains.find(c => c.chain_id === chain_id)?.provider_params,
+            params: _evm_chains.find((c) => c.chain_id === chain_id)
+              ?.provider_params,
           });
         } catch (error) {}
       }
@@ -99,7 +99,7 @@ export default ({
     }
   };
 
-  const chain_data = _evm_chains.find(c => equals_ignore_case(c.id, chain));
+  const chain_data = _evm_chains.find((c) => equals_ignore_case(c.id, chain));
 
   const at_chain = chain_data?.chain_id === chain_id;
 
@@ -108,41 +108,38 @@ export default ({
       onClick={() => {
         if (chain) {
           if (symbol && address && decimals) {
-            addToken(
-              chain_data?.chain_id,
-              {
-                symbol,
-                address,
-                decimals,
-                image: image || `/images/assets/${(symbol.startsWith("axl") && !symbol.endsWith("axl") ? symbol.replace("axl", "") : symbol).toLowerCase()}.png`,
-              }
-            );
-          }
-          else {
+            addToken(chain_data?.chain_id, {
+              symbol,
+              address,
+              decimals,
+              image:
+                image ||
+                `/images/assets/${(symbol.startsWith("axl") &&
+                !symbol.endsWith("axl")
+                  ? symbol.replace("axl", "")
+                  : symbol
+                ).toLowerCase()}.png`,
+            });
+          } else {
             switchChain(chain_data?.chain_id);
           }
         }
       }}
-      className={`min-w-max bg-gray-100 dark:bg-gray-900 ${at_chain ? '' : 'hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer'} rounded-lg flex items-center py-1.5 px-2`}
+      className={`min-w-max bg-gray-100 dark:bg-gray-900 ${
+        at_chain
+          ? ""
+          : "hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer"
+      } rounded-lg flex items-center py-1.5 px-2`}
     >
-      <Image
-        src="/images/wallets/metamask.png"
-        alt=""
-        width={16}
-        height={16}
-      />
+      <Image src="/images/wallets/metamask.png" alt="" width={16} height={16} />
     </button>
   );
 
-  return (
-    at_chain ?
-      <Tooltip
-        placement="top"
-        content="No action needed. Your MetaMask wallet is currently on this chain."
-        className="z-50"
-      >
-        {metamaskButton}
-      </Tooltip> :
-      metamaskButton
+  return at_chain ? (
+    <div title="No action needed. Your MetaMask wallet is currently on this chain.">
+      {metamaskButton}
+    </div>
+  ) : (
+    metamaskButton
   );
 };

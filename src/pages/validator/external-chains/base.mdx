@@ -1,8 +1,7 @@
 # Base
 
 
-import { Callout } from '/src/components/callout'
-import { Tabs, Tab } from 'nextra-theme-docs'
+import { Callout } from "/src/components/callout"
 
 Instructions to set up your Base (Coinbase L2) node.
 
@@ -68,8 +67,8 @@ In order for `vald` to connect to your Base node, your Base RPC should be expose
 vald's `config.toml`
 
 
-<Tabs items={['Testnet']}>
-  <Tab>
+<tabs>
+  <tab-item title="Testnet">
   ```bash
   [[axelar_bridge_evm]]
 
@@ -77,5 +76,5 @@ vald's `config.toml`
   rpc_addr = "http://IP:PORT"
   start-with-bridge = true
   ```
-  </Tab>
-</Tabs>
+  </tab-item>
+</tabs>

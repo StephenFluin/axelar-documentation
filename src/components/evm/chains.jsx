@@ -7,8 +7,6 @@ import evm_chains from "../../data/evm_chains.json";
 import gateways from "../../data/gateways.json";
 import gas_services from "../../data/gas_services.json";
 
-console.log('Side effect import successful');
-
 export default ({ environment = "mainnet" }) => {
   const _evm_chains = evm_chains?.[environment] || [];
   const _gateways = gateways?.[environment] || [];
@@ -95,6 +93,7 @@ export default ({ environment = "mainnet" }) => {
                   {gateway_contract_address && (
                     <Copy
                       size={18}
+                      hide={true}
                       value={gateway_contract_address}
                     />
                   )}
@@ -122,6 +121,7 @@ export default ({ environment = "mainnet" }) => {
                   {gas_service_address && (
                     <Copy
                       size={18}
+                      hide={true}
                       value={gas_service_address}
                     />
                   )}

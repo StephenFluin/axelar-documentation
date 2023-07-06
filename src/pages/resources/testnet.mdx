@@ -1,12 +1,11 @@
 # Testnet
 
-import { Callout } from '/src/components/callout'
+import { Callout } from "/src/components/callout"
 import IBCChannels from '../../components/ibc/channels'
 import TransferFeeCalculator from '../../components/transfer-fee/calculator'
 import EVMChains from '../../components/evm/chains'
 import EVMAssets from '../../components/evm/assets'
-import UpgradePathTestnet from '/src/upgrade-path-testnet.md';
-
+import UpgradePathTestnet from '/src/upgrade-path-testnet.md'
 
 | Variable              | Value     |
 | --------------------- | --------- |
@@ -15,10 +14,12 @@ import UpgradePathTestnet from '/src/upgrade-path-testnet.md';
 | `tofnd` version       | `v0.10.1` |
 
 ## EVM contract addresses
+
 <div className="space-y-1 mt-4">
   <EVMChains environment="testnet" />
 
-  `Constant Address Deployer`:  `0x98b2920d53612483f91f12ed7754e51b4a77919e`
+`Constant Address Deployer`: `0x98b2920d53612483f91f12ed7754e51b4a77919e`
+
 </div>
 
 <div className="space-y-1 mt-4">
@@ -73,5 +74,4 @@ The gas relayer fee does not include any transaction fee assessed by the source 
 
 ## Upgrade Path
 
-<UpgradePathTestnet  />
-
+<UpgradePathTestnet />

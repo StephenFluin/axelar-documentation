@@ -1,8 +1,6 @@
 # Filecoin
 
-import { Callout } from '/src/components/callout'
-import Tabs from '../../../components/tabs'
-import { Tabs as NextraTabs, Tab as NextraTab } from 'nextra-theme-docs'
+import { Callout } from "/src/components/callout"
 
 Set up your Filecoin Mainnet or Testnet Hyperspace node.
 
@@ -219,21 +217,21 @@ In order for `vald` to connect to your Filecoin node, your `rpc_addr` should be 
 vald's `config.toml`
 
 
-<NextraTabs items={['Mainnet', 'Testnet']}>
-  <NextraTab>
+<tabs>
+  <tab-item title="Mainnet">
   ```bash
   [[axelar_bridge_evm]]
   name = "filecoin"
   rpc_addr = "http://localhost:1234/rpc/v1"
   start-with-bridge = true
   ```
-  </NextraTab>
-  <NextraTab>
+  </tab-item>
+  <tab-item title="Testnet">
   ```bash
   [[axelar_bridge_evm]]
   name = "filecoin"
   rpc_addr = "http://localhost:1234/rpc/v1"
   start-with-bridge = true
   ```
-  </NextraTab>
-</NextraTabs>
+  </tab-item>
+</tabs>

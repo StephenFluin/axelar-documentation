@@ -1,7 +1,6 @@
 # Arbitrum
 
-import { Callout } from '/src/components/callout'
-import { Tabs, Tab } from 'nextra-theme-docs'
+import { Callout } from "/src/components/callout"
 
 Set up your Arbitrum Mainnet & Goerli Testnet RPC node
 
@@ -41,18 +40,18 @@ Please provide the RPC URL of your synced [Ethereum node](ethereum/) with this f
   Please use your own Ethereum node instead of using 3rd party providers like alchemy, infura etc. for decentralization/security. Third-party providers also have a specific request limit, and your node can throw 100s of thousands of requests while trying to sync.
 </Callout>
 
-<Tabs items={['Mainnet', 'Goerli Testnet']}>
-  <Tab>
+<tabs>
+  <tab-item title="Mainnet">
   ```bash
   docker run --rm -it -d -v /path/to/data/arbitrum:/home/user/.arbitrum -p 0.0.0.0:8547:8547 -p 0.0.0.0:8548:8548 <LATEST_DOCKER_IMAGE> --l1.url <YOUR_ETH_RPC_URL> --l2.chain-id=42161 --http.api=net,web3,eth,debug --http.corsdomain=* --http.addr=0.0.0.0 --http.vhosts=* --init.url="https://snapshot.arbitrum.io/mainnet/nitro.tar"
   ```
-  </Tab>
-  <Tab>
+  </tab-item>
+  <tab-item title="Goerli Testnet">
   ```bash
  docker run --rm -it -d -v /path/to/data/arbitrum:/home/user/.arbitrum -p 0.0.0.0:8547:8547 -p 0.0.0.0:8548:8548 <LATEST_DOCKER_IMAGE> --l1.url <YOUR_GOERLI_ETH_RPC_URL> --l2.chain-id=421613 --http.api=net,web3,eth,debug --http.corsdomain=* --http.addr=0.0.0.0 --http.vhosts=*
   ```
-  </Tab>
-</Tabs>
+  </tab-item>
+</tabs>
 
 #### Verify sync status
 
@@ -80,21 +79,21 @@ In order for `vald` to connect to your Arbitrum node, your `rpc_addr` should be 
 vald's `config.toml`
 
 
-<Tabs items={['Mainnet', 'Goerli Testnet']}>
-  <Tab>
+<tabs>
+  <tab-item title="Mainnet">
   ```bash
   [[axelar_bridge_evm]]
   name = "arbitrum"
   rpc_addr = "http://IP:PORT"
   start-with-bridge = true
   ```
-  </Tab>
-  <Tab>
+  </tab-item>
+  <tab-item title="Goerli Testnet">
   ```bash
   [[axelar_bridge_evm]]
   name = "arbitrum"
   rpc_addr = "http://IP:PORT"
   start-with-bridge = true
   ```
-  </Tab>
-</Tabs>
+  </tab-item>
+</tabs>

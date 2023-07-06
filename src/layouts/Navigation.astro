@@ -3,7 +3,7 @@ const section = Astro.url.pathname?.match(/\/([^\/]*)\//)?.[1];
 ---
 
 {
-    (section == "dev" || !section) && (
+    section == "dev"  && (
         <div>
             <div class="nav-header">Developers</div>
             <a href="/dev/intro">Introduction</a>
