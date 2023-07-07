@@ -13,7 +13,7 @@ export default ({ environment = "mainnet" }) => {
   const _gas_services = gas_services?.[environment] || [];
 
   return (
-    <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-2 gap-4">
+    <div className="resource-grid">
       {_evm_chains
         .filter(c => !c?.is_staging)
         .map((c, i) => {
@@ -33,12 +33,12 @@ export default ({ environment = "mainnet" }) => {
           return (
             <div
               key={i}
-              className="border dark:border-gray-700 rounded-xl flex flex-col justify-between space-y-2 p-4"
+              className="resource-card"
             >
-              <div className="flex items-start justify-between space-x-2">
-                <div className="flex items-center space-x-3">
+              <div className="flex items-start justify-between">
+                <div className="flex items-center">
                   {image && (
-                    <Image
+                    <img
                       src={image}
                       alt=""
                       width={32}

@@ -222,7 +222,8 @@ h1 .anchor-icon {
   height: 16px;
   border: 0px;
   background-color: transparent;
-  vertical-align: center;
+  vertical-align: middle;
+  margin-left:4px;
 }
 
 tab-item.bleed {
@@ -246,7 +247,7 @@ tab-item.bleed {
 .toast {
   position: fixed;
   bottom: 32px;
-  width:100%;
+  width: 100%;
   text-align: center;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -256,11 +257,50 @@ tab-item.bleed {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 8px 16px;
   border-radius: 8px;
-  margin:0px auto;
-  
+  margin: 0px auto;
 }
 .toast.show {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
-
+}
+.flex {
+  display: flex;
+}
+.resource-card {
+  padding: 1rem;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 0.75rem;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+}
+.resource-card>* {
+  margin-top:4px;
+}
+.resource-card>div>div>div {
+  margin-left: 8px;
+}
+.resource-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  grid-auto-flow: row;
+  display: grid;
+}
+.flex {
+  display:flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-center {
+  align-items: center;
 }
