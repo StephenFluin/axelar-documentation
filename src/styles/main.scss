@@ -35,10 +35,10 @@ h2 {
   font-size: 1.8rem;
   font-weight: 700;
   margin: 1rem 0;
-  margin-top:45px;  
+  margin-top: 45px;
 }
 h3 {
-  font-size:24px;
+  font-size: 24px;
 }
 h1,
 h2,
@@ -51,16 +51,15 @@ h5 {
   }
   .anchor-icon {
     opacity: 0;
-    margin-left:8px;
+    margin-left: 8px;
     transition: opacity 0.2s ease-in-out;
   }
-
 }
 h1:hover .anchor-icon {
-  display:none;
+  display: none;
 }
 h3 {
-  line-height:64px;
+  line-height: 64px;
 }
 p {
   margin: 1rem 0;
@@ -112,8 +111,9 @@ main {
   background-color: #f2f2f2;
   padding: 8px;
 }
-ol li, ul li {
-  margin-bottom:4px;
+ol li,
+ul li {
+  margin-bottom: 4px;
 }
 .mainBody {
   flex: 1;
@@ -124,6 +124,7 @@ ol li, ul li {
   line-height: 32px;
   color: rgb(107, 114, 128);
   font-size: 14px;
+  margin-right: 16px;
 }
 .sideNav .nav-header {
   font-size: 1.2em;
@@ -196,7 +197,7 @@ tab-item.active {
 }
 
 h1 .anchor-icon {
-  margin-left:8px;
+  margin-left: 8px;
 }
 
 .callout {
@@ -214,27 +215,24 @@ h1 .anchor-icon {
   color: rgb(185, 28, 28);
 }
 .copy-capable {
-  display:inline;
-  
+  display: inline;
 }
 .copy-capable button {
-  width:16px;
-  height:16px;
-  border:0px;
-  background-color:transparent;
-  vertical-align:center;
+  width: 16px;
+  height: 16px;
+  border: 0px;
+  background-color: transparent;
+  vertical-align: center;
 }
 
 tab-item.bleed {
-  padding:0px;
+  padding: 0px;
 }
 
 .resources {
-    width:100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
-
-
 
 .resources tr:nth-child(odd) {
   background-color: #f2f2f2;
@@ -243,4 +241,26 @@ tab-item.bleed {
 .resources td {
   border: 0px;
   padding: 16px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 32px;
+  width:100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.toast span {
+  background-color: #b8b8b8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin:0px auto;
+  
+}
+.toast.show {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+
 }

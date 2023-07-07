@@ -54,5 +54,4 @@ export const addTabs = () => {
     tab.insertBefore(titleBar, tab.firstChild);
   }
 };
-console.log("adding tabs");
 addTabs();
