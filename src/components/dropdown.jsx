@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Fragment, useState, useEffect } from "react";
 import _ from "lodash";
 import { Menu, Transition } from "@headlessui/react";
@@ -98,7 +97,7 @@ export default ({
               {selectedData ? (
                 <div className="flex items-center space-x-2">
                   {selectedData.image && (
-                    <Image
+                    <img
                       src={selectedData.image}
                       alt=""
                       width={24}
@@ -114,9 +113,9 @@ export default ({
                 placeholder || "Select Options"
               )}
               {open ? (
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
               ) : (
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="m6.293 13.293 1.414 1.414L12 10.414l4.293 4.293 1.414-1.414L12 7.586z"></path></svg>
+                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="m6.293 13.293 1.414 1.414L12 10.414l4.293 4.293 1.414-1.414L12 7.586z"></path></svg>
               )}
             </Menu.Button>
           </div>
@@ -184,7 +183,7 @@ export default ({
                         } cursor-pointer flex items-center text-sm space-x-2 py-2 px-4`}
                       >
                         {o.image && (
-                          <Image
+                          <img
                             src={o.image}
                             alt=""
                             width={24}

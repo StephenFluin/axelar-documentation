@@ -280,6 +280,11 @@ tab-item.bleed {
 .resource-card>div>div>div {
   margin-left: 8px;
 }
+.resource-card>div>button {
+  border: 0;
+  padding:6px;
+  border-radius:8px;
+}
 .resource-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;

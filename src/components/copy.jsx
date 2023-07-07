@@ -8,7 +8,7 @@ export default ({
 
 
   return (
-    <div class="copy-capable" value={hide ? value : null}>
+    <div className="copy-capable" value={hide ? value : null}>
       {hide ? '' : value}</div>
   );
 };

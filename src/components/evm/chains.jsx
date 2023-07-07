@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import AddChain from "../web3";
 import Copy from "../copy";
 import { ellipse } from "../../utils";
@@ -55,7 +53,7 @@ export default ({ environment = "mainnet" }) => {
                     </span>
                   </div>
                 </div>
-                <AddChain
+                <AddChain 
                   environment={environment}
                   chain={id}
                 />

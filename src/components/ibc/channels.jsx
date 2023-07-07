@@ -1,4 +1,3 @@
-import Image from "next/image";
 import _ from "lodash";
 
 import cosmos_chains from "../../data/cosmos_chains.json";
@@ -46,7 +45,7 @@ export default ({ environment = "mainnet" }) => {
           >
             <div className="flex flex-col items-center space-y-1">
               {chain_data?.image && (
-                <Image
+                <img
                   src={chain_data.image}
                   alt=""
                   width={32}
@@ -69,14 +68,14 @@ export default ({ environment = "mainnet" }) => {
               <span className="whitespace-nowrap text-gray-600 dark:text-gray-400 text-xs">
                 {channels.find(c => c?.from === chain_data?.id)?.channel_id}
               </span>
-              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="m15 12 5-4-5-4v2.999H2v2h13zm7 3H9v-3l-5 4 5 4v-3h13z"></path></svg>
+              <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="m15 12 5-4-5-4v2.999H2v2h13zm7 3H9v-3l-5 4 5 4v-3h13z"></path></svg>
               <span className="whitespace-nowrap text-gray-600 dark:text-gray-400 text-xs">
                 {channels.find(c => c?.from === other_chain_data?.id)?.channel_id}
               </span>
             </div>
             <div className="flex flex-col items-center space-y-1">
               {other_chain_data?.image && (
-                <Image
+                <img
                   src={other_chain_data.image}
                   alt=""
                   width={32}

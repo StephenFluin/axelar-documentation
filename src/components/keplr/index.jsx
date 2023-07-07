@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default ({
   environment = "mainnet",
   chain,
@@ -41,7 +39,7 @@ export default ({
       }}
       className="min-w-max hover:bg-gray-200 dark:bg-gray-900 dark:hover:bg-gray-800 rounded-lg cursor-pointer flex items-center py-1.5 px-2"
     >
-      <Image
+      <img
         src="/images/wallets/keplr.png"
         alt=""
         width={16}

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import Web3 from "web3";
 
@@ -78,6 +77,7 @@ export default ({
   };
 
   const switchChain = async (chain_id, contract) => {
+    console.log("Switching chains.");
     try {
       await web3.currentProvider.request({
         method: "wallet_switchEthereumChain",
@@ -131,7 +131,7 @@ export default ({
           : "hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer"
       } rounded-lg flex items-center py-1.5 px-2`}
     >
-      <Image src="/images/wallets/metamask.png" alt="" width={16} height={16} />
+      <img src="/images/wallets/metamask.png" alt="" width={16} height={16} />
     </button>
   );
 

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useState } from "react";
 
 import Dropdown from "../dropdown";
@@ -99,7 +98,7 @@ export default ({ environment = "mainnet" }) => {
                     {c.id === "asset" ?
                       <div className="min-w-max flex items-center space-x-2">
                         {image && (
-                          <Image
+                          <img
                             src={image}
                             alt=""
                             width={28}
@@ -115,7 +114,7 @@ export default ({ environment = "mainnet" }) => {
                       c.id === "chain" ?
                         <div className="min-w-max flex items-center space-x-2.5">
                           {chain_data?.image && (
-                            <Image
+                            <img
                               src={chain_data.image}
                               alt=""
                               width={24}
